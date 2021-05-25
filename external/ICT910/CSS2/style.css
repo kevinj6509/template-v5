@@ -1,0 +1,72 @@
+body{
+color:red;
+background-image:url('images/odie.gif');
+background-size:1000px 1000px;
+}
+#a{
+font-family:"Comic Sans MS";
+}
+#b{
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+#b:hover {background-color: #3e8e41}
+
+#b:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+
+#b{
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+#c span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+#c span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+#c:hover span {
+  padding-right: 25px;
+}
+
+#c:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+p{
+font-family:"Comic Sans MS";
+}

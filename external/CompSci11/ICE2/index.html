@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ICE2</title>
+  </head>
+  
+  <body>
+    <form>
+      <input
+        onchange="date1()"
+        id="date"
+        type="radio"
+        name="date"
+        value="date"
+      />
+      date<br />
+      <input
+        onchange="date2()"
+        id="year"
+        type="radio"
+        name="date"
+        value="year"
+      />
+      year<br />
+      <input
+        onchange="date3()"
+        id="month"
+        type="radio"
+        name="date"
+        value="month"
+      />
+      month<br />
+      <input onchange="date4()" id="day" type="radio" name="date" value="day" />
+      day<br />
+      <input
+        onchange="date5()"
+        id="time"
+        type="radio"
+        name="date"
+        value="time"
+      />
+      time<br />
+    </form>
+
+    <div id="display"></div>
+
+    <script src="style.js"></script>
+  </body>
+</html>

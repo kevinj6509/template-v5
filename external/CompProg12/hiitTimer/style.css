@@ -1,0 +1,306 @@
+body {
+  place-items: center;
+  font-family: arial;
+}
+
+.button {
+  font-family: bangers;
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 30px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  left: 0%;
+}
+
+.button1 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #4CAF50;
+}
+
+.button1:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.button2 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #008CBA;
+}
+
+.button2:hover {
+  background-color: #008CBA;
+  color: white;
+}
+
+#bottom{
+  bottom: 5%;
+}
+
+#creator {
+  width: 43%;
+  height: 80%;
+  top: 17%;
+  left: 5%;
+  background: rgb(148, 0, 125);
+  background: linear-gradient(
+    0deg,
+    rgba(148, 0, 125, 1) 0%,
+    rgba(86, 10, 149, 1) 43%,
+    rgba(1, 0, 129, 1) 100%
+  );
+  border-radius: 25px;
+  position: absolute;
+}
+
+#wDisplay {
+  width: 43%;
+  height: 80%;
+  top: 17%;
+  right: 5%;
+  background: rgb(143, 6, 71);
+  background: linear-gradient(
+    0deg,
+    rgba(143, 6, 71, 1) 0%,
+    rgba(149, 30, 10, 1) 43%,
+    rgba(222, 0, 0, 1) 100%
+  );
+  border-radius: 25px;
+  position: absolute;
+}
+
+#innerContent {
+  border-radius: 25px;
+  width: 90%;
+  height: 90%;
+  top: 5%;
+  left: 5%;
+  background-color: #FFFFFF;
+  position: absolute;
+}
+
+#innerContent2 {
+  border-radius: 25px;
+  width: 90%;
+  height: 90%;
+  top: 5%;
+  left: 5%;
+  background-color: #FFFFFF;
+  position: absolute;
+}
+
+p {
+  font-size: 3em;
+  font-family: "lobster";
+}
+
+#getTime2 {
+  width: 80%;
+  height: 60%;
+  left: 10%;
+  top: 20%;
+  color: #000000;
+}
+
+#display {
+  font-size: 5em;
+  font-family: "lobster";
+}
+
+#content {
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: #343434;
+  text-align: center;
+  color: white;
+}
+
+#timerContainer {
+  display: none;
+  top: 25%;
+  left: 35%;
+  width: 30%;
+  height: 30%;
+  position: absolute;
+  background-color: #343434;
+  text-align: center;
+  color: white;
+}
+
+h1 {
+  font-family: "bangers";
+  letter-spacing: 10px;
+  font-size: 8em;
+}
+
+/* On screens that are 992px wide or less, go from four columns to two columns */
+@media screen and (max-width: 992px) {
+  h1 {
+    font-size: 6em;
+  }
+  #timerContainer {
+    width: 50%;
+    height: 50%;
+    left: 25%;
+    top: 25%;
+  }
+  #display {
+    font-size: 3em;
+  }
+
+  .base-timer__label {
+    font-size: 20px;
+  }
+
+  label {
+    font-size: 1em;
+  }
+}
+
+/* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 4em;
+  }
+}
+
+input[type="text"],
+select {
+  text-align: center;
+  display: inline;
+  position: relative;
+  left: 10%;
+  width: 50%;
+  padding: 12px 20px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+label {
+  left: 0%;
+  position: relative;
+  display: block;
+  text-align: center  ;
+  font-size: 2em;
+}
+
+@media screen and (max-width: 992px) {
+  input[type="text"],
+  select {
+    width: 40%;
+  }
+
+  @media screen and (max-width: 600px) {
+    input[type="text"],
+    select {
+      width: 30%;
+    }
+  }
+}
+
+#getTime {
+  margin-left: 25%;
+  display: none;
+}
+
+.startTimer {
+  width: 30%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  left: 35%;
+  position: absolute;
+  display: block;
+}
+
+.startTimer2 {
+  width: 10%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  position: absolute;
+  display: inline;
+}
+
+#margin{
+  margin-top: 7%;
+}
+
+/**********************************************************/
+/* copied code! ALL credits to Mateusz Rybczonec          */
+/* Source: https://css-tricks.com/how-to-create-an-animated-countdown-timer-with-html-css-and-javascript/ */
+/**********************************************************/
+
+.base-timer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.base-timer__svg {
+  transform: scaleX(-1);
+}
+
+.base-timer__circle {
+  fill: none;
+  stroke: none;
+}
+
+.base-timer__path-elapsed {
+  stroke-width: 7px;
+  stroke: grey;
+}
+
+.base-timer__path-remaining {
+  stroke-width: 7px;
+  stroke-linecap: round;
+  transform: rotate(90deg);
+  transform-origin: center;
+  transition: 1s linear all;
+  fill-rule: nonzero;
+  stroke: currentColor;
+}
+
+.base-timer__path-remaining.green {
+  color: rgb(65, 184, 131);
+}
+
+.base-timer__path-remaining.orange {
+  color: orange;
+}
+
+.base-timer__path-remaining.red {
+  color: red;
+}
+
+.base-timer__label {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 100px;
+}

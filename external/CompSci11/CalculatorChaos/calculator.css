@@ -1,0 +1,771 @@
+body {
+  padding-left: 150px;
+  padding-right: 150px;
+  background-color: #0036aa;
+}
+
+h1 {
+  text-decoration: underline;
+  font-size: 200%;
+}
+
+#border {
+  position: relative;
+  top: 75px;
+  background-color: #FFFFFF;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  border: thick solid green;
+}
+
+#chickenBox {
+  z-index: 7;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 744px;
+  width: 247px;
+}
+
+#chicken {
+  z-index: 7;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+#exit1 {
+  z-index: 7;
+  position: absolute;
+  background-color: #FFFFFF;
+  height: 25px;
+  width: 25px;
+  top: 0px;
+  right: 0px;
+}
+
+#lol {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  height: 744px;
+  width: 250px;
+}
+
+#exit2 {
+  z-index: 7;
+  position: absolute;
+  background-color: #FFFFFF;
+  height: 25px;
+  width: 25px;
+  top: 0px;
+  right: 0px;
+}
+
+.hidden {
+  display: none;
+}
+
+.unhidden {
+  display: block;
+}
+
+#lightbox {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 1025px;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 3;
+}
+
+#display {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  height: 733px;
+  width: 1100px;
+  background-image: url("/external/CompSci11/CalculatorChaos/Images/bg.jpg");
+  background-repeat: no-repeat;
+  border: thick solid black;
+  background-size: 100% 100%;
+}
+
+#flash {
+  top: -5px;
+  left: -5px;
+  position: absolute;
+  height: 733px;
+  width: 1100px;
+  background-image: url("/external/CompSci11/CalculatorChaos/Images/flash.PNG");
+  background-repeat: no-repeat;
+  border: thick solid black;
+  background-size: 100% 100%;
+  z-index: 6;
+}
+
+#ad {
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  height: 733px;
+  width: 1100px;
+  z-index: 4;
+}
+
+#skip {
+  position: absolute;
+  bottom: 70px;
+  right: 0px;
+  z-index: 5;
+  height: 70px;
+  width: 180px;
+}
+
+#bars {
+  position: absolute;
+  height: 733px;
+  width: 1100px;
+  background-color: #000000;
+  z-index: 3;
+}
+
+#win {
+  top: 0px;
+  right: 0px;
+  position: absolute;
+  height: 733px;
+  width: 1100px;
+  background-image: url("/external/CompSci11/CalculatorChaos/Images/win.png");
+  background-repeat: no-repeat;
+  border: thick solid black;
+  background-size: 100% 100%;
+}
+
+#lose {
+  top: 0px;
+  right: 0px;
+  position: absolute;
+  height: 733px;
+  width: 1100px;
+  background-image: url("/external/CompSci11/CalculatorChaos/Images/lose.png");
+  background-repeat: no-repeat;
+  border: thick solid black;
+  background-size: 100% 100%;
+}
+
+#replay {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  height: 35px;
+  width: 90px;
+  z-index: 2;
+  background-color: blue;
+  text-align: center;
+  padding-top: 15px;
+  color: white;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#replay:hover {
+  background-color: red;
+}
+
+#titlenums {
+  background-color: grey;
+  position: absolute;
+  border: solid 3px #4f5051;
+  height: 37px;
+  width: 350px;
+  top: 110px;
+  left: 75px;
+}
+
+#numbers {
+  background-color: grey;
+  position: absolute;
+  border: solid 3px #4f5051;
+  height: 150px;
+  width: 350px;
+  top: 150px;
+  left: 75px;
+}
+
+#bar {
+  position: absolute;
+  background-color: #cccccc;
+  top: 0px;
+  left: 0px;
+  height: 50px;
+  width: 100%;
+  z-index: 1;
+}
+
+#begin {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  height: 35px;
+  width: 90px;
+  z-index: 2;
+  background-color: #d80d0d;
+  text-align: center;
+  padding-top: 15px;
+  color: white;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#newBegin {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  height: 35px;
+  width: 90px;
+  z-index: 2;
+  background-color: #ed5f07;
+  text-align: center;
+  padding-top: 15px;
+  color: white;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#begin:hover {
+  background-color: #2fd606;
+}
+
+#ctitle {
+  background-color: white;
+  border: solid thick blue;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  top: 75px;
+  height: 125px;
+  width: 550px;
+  border-radius: 25px;
+  text-align: center;
+  padding: 5px;
+  font-family: "VT323", monospace;
+  font-size: 30px;
+}
+
+#instruction {
+  position: absolute;
+  z-index: 3;
+  background-color: #FFFFFF;
+  height: 450px;
+  width: 550px;
+  top: 105px;
+  left: 520px;
+  padding: 150px;
+  text-align: center;
+  font-size: 20px;
+}
+
+#x {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  height: 30px;
+  width: 30px;
+  z-index: 2;
+}
+
+#newstart {
+  margin-left: auto;
+  position: absolute;
+  top: 0px;
+  right: 10px;
+  height: 40px;
+  width: 80px;
+  text-align: center;
+  z-index: 2;
+}
+
+#refresh {
+  text-align: center;
+  padding-top: 15px;
+  position: absolute;
+  top: 0px;
+  left: 800px;
+  height: 35px;
+  width: 90px;
+  z-index: 2;
+  background-color: #e2e206;
+  color: white;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#refresh:hover {
+  background-color: #e29c06;
+}
+
+#lvl {
+  position: absolute;
+  top: 0px;
+  left: 90px;
+  height: 50px;
+  width: 90px;
+  z-index: 2;
+  background-color: #FFFFFF;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#timer {
+  position: absolute;
+  top: 0px;
+  left: 890px;
+  height: 50px;
+  width: 120px;
+  z-index: 2;
+  background-color: #6a9ced;
+  font-size: 16px;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#ins {
+  margin-right: auto;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 50px;
+  width: 90px;
+  text-align: center;
+  z-index: 2;
+  background-color: #51cc06;
+  color: white;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#ins:hover {
+  background-color: #e0ce04;
+}
+
+.num {
+  position: absolute;
+  width: 60px;
+  padding-top: 13px;
+  height: 37px;
+  background-color: blue;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#num1 {
+  top: 15px;
+  left: 45px;
+}
+#num2 {
+  top: 15px;
+  left: 110px;
+}
+#num3 {
+  top: 15px;
+  left: 175px;
+}
+#num4 {
+  top: 15px;
+  left: 240px;
+}
+#num5 {
+  top: 70px;
+  left: 45px;
+}
+#num6 {
+  top: 70px;
+  left: 110px;
+}
+#num7 {
+  top: 70px;
+  left: 175px;
+}
+#num8 {
+  top: 70px;
+  left: 240px;
+}
+
+@font-face {
+  font-family: calculatorFont;
+  src: url(digital-7.italic.ttf);
+}
+
+#calculator {
+  position: absolute;
+  margin-left: 600px;
+  margin-top: 80px;
+  background-color: #000000;
+  height: 450px;
+  width: 350px;
+  border-radius: 50px;
+}
+
+#pdisplay {
+  font-family: calculatorFont;
+  font-size: 25px;
+}
+
+#hideCalc {
+  position: absolute;
+  margin-left: 600px;
+  margin-top: 80px;
+  height: 450px;
+  width: 350px;
+  z-index: 7;
+}
+
+#pos1 {
+  position: absolute;
+  width: 40px;
+  height: 35px;
+  background-color: grey;
+  z-index: 2;
+  top: 235px;
+  left: 50px;
+}
+
+#pos1:hover {
+  background-color: #b5072f;
+}
+
+#pos2 {
+  position: absolute;
+  width: 40px;
+  height: 35px;
+  background-color: grey;
+  z-index: 2;
+  top: 235px;
+  left: 100px;
+}
+
+#pos2:hover {
+  background-color: #b5072f;
+}
+
+#pos3 {
+  position: absolute;
+  width: 40px;
+  height: 35px;
+  background-color: grey;
+  z-index: 2;
+  top: 235px;
+  left: 150px;
+}
+
+#pos3:hover {
+  background-color: #b5072f;
+}
+
+#pos4 {
+  position: absolute;
+  width: 40px;
+  height: 35px;
+  background-color: grey;
+  z-index: 2;
+  top: 180px;
+  left: 50px;
+}
+
+#pos4:hover {
+  background-color: #b5072f;
+}
+
+#pos5 {
+  position: absolute;
+  width: 40px;
+  height: 35px;
+  background-color: grey;
+  z-index: 2;
+  top: 180px;
+  left: 100px;
+}
+
+#pos5:hover {
+  background-color: #b5072f;
+}
+
+#pos6 {
+  position: absolute;
+  width: 40px;
+  height: 35px;
+  background-color: grey;
+  z-index: 2;
+  top: 180px;
+  left: 150px;
+}
+
+#pos6:hover {
+  background-color: #b5072f;
+}
+
+#pos7 {
+  position: absolute;
+  width: 40px;
+  height: 35px;
+  background-color: grey;
+  z-index: 2;
+  top: 125px;
+  left: 50px;
+}
+
+#pos7:hover {
+  background-color: #b5072f;
+}
+
+#pos8 {
+  position: absolute;
+  width: 40px;
+  height: 35px;
+  background-color: grey;
+  z-index: 2;
+  top: 125px;
+  left: 100px;
+}
+
+#pos8:hover {
+  background-color: #b5072f;
+}
+
+#pos9 {
+  position: absolute;
+  width: 40px;
+  height: 35px;
+  background-color: grey;
+  z-index: 2;
+  top: 125px;
+  left: 150px;
+}
+
+#pos9:hover {
+  background-color: #b5072f;
+}
+
+#pos0 {
+  position: absolute;
+  background-color: grey;
+  z-index: 2;
+  top: 300px;
+  left: 50px;
+  width: 140px;
+  height: 35px;
+}
+
+#pos0:hover {
+  background-color: #b5072f;
+}
+
+#posS {
+  position: absolute;
+  width: 40px;
+  height: 35px;
+  background-color: grey;
+  z-index: 2;
+  top: 365px;
+  left: 50px;
+}
+
+#posS:hover {
+  background-color: #b5072f;
+}
+
+#posP {
+  position: absolute;
+  width: 40px;
+  height: 35px;
+  background-color: grey;
+  z-index: 2;
+  top: 365px;
+  left: 100px;
+}
+
+#posP:hover {
+  background-color: #b5072f;
+}
+
+#posD {
+  position: absolute;
+  width: 40px;
+  height: 35px;
+  background-color: grey;
+  z-index: 2;
+  top: 365px;
+  left: 150px;
+}
+
+#posD:hover {
+  background-color: #b5072f;
+}
+
+#posM {
+  position: absolute;
+  width: 40px;
+  height: 35px;
+  background-color: grey;
+  z-index: 2;
+  top: 365px;
+  left: 200px;
+}
+
+#posM:hover {
+  background-color: #b5072f;
+}
+
+#posC {
+  position: absolute;
+  width: 40px;
+  height: 35px;
+  background-color: grey;
+  z-index: 2;
+  top: 125px;
+  left: 250px;
+}
+
+#posC:hover {
+  background-color: #b5072f;
+}
+
+#posDe {
+  position: absolute;
+  width: 40px;
+  height: 35px;
+  background-color: grey;
+  z-index: 2;
+  top: 180px;
+  left: 250px;
+}
+
+#posDe:hover {
+  background-color: #b5072f;
+}
+
+#posE {
+  position: absolute;
+  width: 40px;
+  height: 35px;
+  background-color: grey;
+  z-index: 2;
+  top: 235px;
+  left: 250px;
+}
+
+#posE:hover {
+  background-color: #b5072f;
+}
+
+#posSqrt {
+  position: absolute;
+  width: 40px;
+  height: 35px;
+  background-color: grey;
+  z-index: 2;
+  top: 365px;
+  left: 250px;
+}
+
+#posSqrt:hover {
+  background-color: #b5072f;
+}
+
+#posMr {
+  position: absolute;
+  width: 35px;
+  height: 25px;
+  background-color: red;
+  z-index: 2;
+  top: 90px;
+  left: 75px;
+}
+
+#posMr:hover {
+  background-color: blue;
+}
+
+#posMin {
+  position: absolute;
+  width: 35px;
+  height: 25px;
+  background-color: red;
+  z-index: 2;
+  top: 90px;
+  left: 245px;
+}
+
+#posMin:hover {
+  background-color: blue;
+}
+
+#cdisplay {
+  position: absolute;
+  background-color: #ffffff;
+  height: 55px;
+  width: 225px;
+  top: 30px;
+  left: 65px;
+}
+
+#title {
+  border: thick solid green;
+  border-radius: 50px;
+  text-align: center;
+  background-color: #ffffff;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.dropbtn {
+  border: solid 3px #ed332d;
+  background-color: #ed332d;
+  width: 90px;
+  height: 50px;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  cursor: crosshair;
+}
+
+.dropbtn:hover {
+  border: solid 3px #95d114;
+  background-color: #95d114;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #dddddd;
+}
+
+.show {
+  display: block;
+}

@@ -1,0 +1,26 @@
+#n{
+	display:grid;
+	grid-template-rows:4 1fr 1fr 1fr 1fr;
+	grid-template-columns:4 1fr 1fr 1fr 1fr;
+}
+nav{
+	background-color:red;
+}
+header{
+	background-color:blue;
+}
+main{
+	background-color:green;
+}
+aside{
+	background-color:aqua;
+}
+figure{
+	background-color:magenta;
+}
+figcaption{
+	background-color:lime;
+}
+footer{
+	background-color:pink;
+}

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+	
+	<!-- <link rel="manifest" href="manifest.json" />
+	<meta name="mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="application-name" content="PWA Workshop" />
+	<meta name="apple-mobile-web-app-title" content="PWA Workshop" />
+	<meta name="msapplication-starturl" content="/index.html" />
+	<meta name="description" content="A hiit workout timer">
+	<meta name="theme-color" content="#343434"/>
+	<meta
+	  name="viewport"
+	  content="width=device-width, initial-scale=1, shrink-to-fit=no"
+	/>
+	-->
+	
+    <title>HIIT Timer</title>
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- <link rel="apple-touch-icon" href="icons/icon-192x192.png">
+    <link
+        rel="icon"
+        href="/icons/icon-256x256.png"
+        type="image/x-icon"
+    /> -->
+
+    <!-- import the webpage's javascript file -->
+    <script src="script.js" defer></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bangers&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body onload="preload()">
+    <div id="content">
+      
+      <h1>HIIT Timer</h1>
+
+      <div id="getTime">
+        <label for="warmUp">Warm Up Length: </label>
+        <input type="text" id="warmUp" name="warmUp" placeholder="3:20" />
+
+        <label for="highIntensity">High Intensity Interval Length: </label>
+        <input
+          type="text"
+          id="highIntensity"
+          name="highIntensity"
+          placeholder="3:20"
+        />
+
+        <label for="lowIntensity">Low Intensity Interval Length: </label>
+        <input
+          type="text"
+          id="lowIntensity"
+          name="lowIntensity"
+          placeholder="3:20"
+        />
+
+        <label for="coolDown">Cool Down Length: </label>
+        <input type="text" id="coolDown" name="coolDown" placeholder="3:20" />
+
+        <label for="setAmount">Amount of Sets: </label>
+        <input type="text" id="setAmount" name="setAmount" placeholder="4" />
+
+        <div class="startTimer" onclick="toggleTimer()">Start Timer</div>
+      </div>
+
+      <div id="getTime2">
+        <div id="creator">
+          <div id="innerContent">
+            <div>
+              <p>Create a Workout!</p>
+              <label for="warmUp2">Warm Up Length: </label>
+              <input type="text" id="warmUp2" name="warmUp2" placeholder="3:20" />
+              <div class="startTimer2" onclick="setWarmUp()">Update</div>
+              <br><br>
+              <!-- <label for="coolDown2">Cool Down Length: </label>
+              <input type="text" id="coolDown2" name="coolDown2" placeholder="3:20" />
+              <div class="startTimer2" onclick="">Update</div> -->
+
+              <br><hr>
+
+              <p>Create an Interval: </p>
+
+              <label >Interval Name: </label>
+              <input type="text" id="intName" name="name" placeholder="Run" />
+
+              <label >Interval Length: </label>
+              <input type="text" id="intLength" name="time" placeholder="3:20" />
+
+              <div class="startTimer" onclick="addInterval()">Add Interval</div>
+            </div>
+            
+            <div id="margin">  
+              <label>Add Cooldown: </label>
+              <input type="text" id="cooldownDisplay" placeholder="3:20" />
+
+              <div class="startTimer" onclick="setCooldown()">Add Cooldown</div>
+            </div>
+          </div>
+        </div>
+
+        <div id="wDisplay">
+          <div id="innerContent2">
+            <p>Your current workout: </p>
+            <div id="workout"></div>
+            <div id="bottom">
+              <div class="startTimer" onclick="startWorkout()">Start Workout</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="timerContainer">
+        <div id="display"></div>
+        <div id="app">
+          <div id="setType">Warm Up</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,11 @@
+p{
+	margin-left:100px;
+	padding-bottom:100px;
+	border-bottom:red dotted 10px;
+	border-top:blue ridge 10px;
+	color:green;
+	font:2em verdana;
+	text-decoration:underline;
+	background-image:url("horse.jpg");
+	background-repeat:repeat-x;
+}

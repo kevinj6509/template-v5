@@ -1,0 +1,51 @@
+body{
+	background-color:#1AE895;
+}
+#main{
+	background-color:#1900FF;
+	width:649px;
+	height:500px;
+	position:absolute;
+	top:0;
+	left:50px;
+}
+#nav{
+	display:grid;
+	grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr;
+	height:40px;
+}
+
+#nav a:hover{
+	color:white;
+	background-color:grey;
+
+}
+
+#nav > a{
+	display:flex;
+	background-color:green;
+	text-decoration:none;
+	color:#1AE895;
+	align-items:center;
+	justify-content:center;
+	font-weight:bold;
+}
+
+#nav{
+	background-color:green;
+}
+
+#ducky{
+	position:absolute;
+	right:20px;
+	top:140px;
+}
+
+#box{
+	width:260px;
+	height:260px;
+	background-color:cyan;
+	color:green;
+	padding:20px;
+	margin:20px;
+}

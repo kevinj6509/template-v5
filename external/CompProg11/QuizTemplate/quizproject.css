@@ -1,0 +1,141 @@
+hover:hover {
+  background-color: grey;
+}
+
+#next {
+  background-color: blue;
+  padding: 20px;
+  color: white;
+  text-align: center;
+  border-radius: 25px;
+}
+
+#reloadC {
+  background-color: red;
+  padding: 20px;
+  color: white;
+  text-align: center;
+  border-radius: 25px;
+}
+
+#mBody {
+  background-color: white;
+  padding: 30px;
+  padding-top: 5px;
+}
+
+#reload {
+  font-family: Arial;
+  font-size: 2em;
+}
+
+#nextP {
+  font-family: Arial;
+  font-size: 2em;
+}
+
+#padd {
+  padding: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+.unhidden {
+  display: block;
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("quizimages/bg.jpg");
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 30px;
+}
+
+/* Style the header */
+.header {
+  grid-area: header;
+  background-color: #4c84a9;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+}
+
+/* The grid container */
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "header header header header"
+    "left left left left"
+    "right right right right"
+    "footer1 footer1 footer1 footer1"
+    "footer2 footer2 footer2 footer2";
+  grid-row-gap: 20px;
+  grid-template-columns: repeat(4, 25%);
+}
+
+.left,
+.right,
+.header,
+.footer1,
+footer2 {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+/* Style the left column */
+.left {
+  grid-area: left;
+  background-color: #ccc;
+}
+
+/* Style the right column */
+.right {
+  grid-area: right;
+  background-color: #ccc;
+}
+
+/* Style the footer */
+.footer1 {
+  grid-area: footer1;
+  background-color: #f1f1f1;
+  padding: 10px;
+  text-align: center;
+}
+
+.footer2 {
+  font-size: 2em;
+  grid-area: footer2;
+  background-color: #f1f1f1;
+  padding: 10px;
+  text-align: center;
+}
+
+#question {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+#concl {
+  padding: 10px;
+  font-size: 2em;
+}
+
+.options {
+  font-size: 1.5em;
+  padding: 0.4em;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media (min-width: 600px) {
+  .grid-container {
+    grid-template-areas:
+      "header header header header"
+      "left left right right"
+      "footer1 footer1 footer2 footer2";
+  }
+}

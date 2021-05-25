@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="check.js"></script>
+
+    <meta charset="utf-8" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-title" content="Weather PWA" />
+    <link rel="apple-touch-icon" href="images/icons/icon-152x152.png" />
+    <meta name="description" content="A sample PWA weather app" />
+    <meta name="theme-color" content="#2F3BA2" /> -->
+
+    <title>MultiTranslator</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    
+	<!-- <link
+      rel="icon"
+      href="https://cdn.glitch.com/2a544231-4591-4529-b941-bd7b992e0519%2Ffav.ico?v=1574978169993"
+      type="image/x-icon"
+    />
+    <link rel="manifest" href="manifest.json" /> -->
+	
+  </head>
+
+  <!--<body onload="loader(),setup()">-->
+  <body onload="setup()">
+    <div class="overlay-content">
+      <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" id="closebtn" onclick="closeNav()">X</a>
+        <a id="lang1" onclick="setLang(0)">Yoda</a>
+        <a id="lang2" onclick="setLang(1)">Pirate</a>
+        <a id="lang3" onclick="setLang(2)">Valspeak</a>
+        <a id="lang4" onclick="setLang(3)">Minion</a>
+        <a id="lang5" onclick="setLang(4)">Ferblatin</a>
+        <a id="lang6" onclick="setLang(5)">Piglatin</a>
+        <a id="lang7" onclick="setLang(6)">Dothraki</a>
+        <a id="lang8" onclick="setLang(7)">Sindarin</a>
+        <a id="lang9" onclick="setLang(8)">Quenya</a>
+        <a id="lang10" onclick="setLang(9)">Orcish</a>
+        <a id="lang11" onclick="setLang(10)">Sith</a>
+        <a id="lang12" onclick="setLang(11)">Cheunh</a>
+        <a id="lang13" onclick="setLang(12)">Gungan</a>
+        <a id="lang14" onclick="setLang(13)">Mandalorian</a>
+        <a id="lang15" onclick="setLang(14)">Huttese</a>
+        <a id="lang16" onclick="setLang(15)">Chef</a>
+        <a id="lang17" onclick="setLang(16)">Catalan</a>
+        <a id="lang18" onclick="setLang(17)">Oldenglish</a>
+        <a id="lang19" onclick="setLang(18)">Shakespeare</a>
+        <a id="lang20" onclick="setLang(19)">Vulcan</a>
+        <a id="lang21" onclick="setLang(20)">Klingon</a>
+        <!-- <a id="lang22" onclick="setLang(21)">Romulan</a> -->
+        <!-- <a id="lang23" onclick="setLang(21)">Dovahzul</a> -->
+        <!-- <a id="lang24" onclick="setLang(22)">Thuum</a> -->
+        <!-- <a id="lang25" onclick="setLang(23)">Aldmeris</a> -->
+        <a id="lang26" onclick="setLang(21)">Groot</a>
+        <!-- <a id="lang27" onclick="setLang(25)">Wakandan</a> -->
+        <a id="lang28" onclick="setLang(22)">Jive</a>
+      </div>
+    </div>
+
+    <div id="padding">
+      <!--
+      <div id="mLoad" class="hidden">
+        <h1 id="mH1">Loading API Info...</h1>
+          <div id="loadDiv"></div>
+        <img id="closeLoader" src="https://cdn.glitch.com/2a544231-4591-4529-b941-bd7b992e0519%2Fclose-x-icon-4.jpg?v=1575056227228" alt="close" onclick="hideLoader()">
+        </div>
+      -->
+
+      <div id="mOffline" class="hidden">
+        <img
+          id="closeLoader"
+          src="https://cdn.glitch.com/2a544231-4591-4529-b941-bd7b992e0519%2Fclose-x-icon-4.jpg?v=1575056227228"
+          alt="close"
+          onclick="hideLoader()"
+        />
+        <h1 id="mH1">You are offline</h1>
+        <p>Some functionality requires access to the internet!</p>
+      </div>
+
+      <div id="mBody">
+        <div id="mTitle">
+          <button class="dropbtn" id="lang" onclick="openNav()">Yoda</button>
+          <div id="textCover"><p id="title">Translator</p></div>
+        </div>
+
+        <!-- <div id="butInstall" >Install</div> -->
+
+        <br />
+
+        <form id="textForm">
+          <label for="text">Text To Translate: </label>
+          <br />
+          <input type="text" id="text" /> <br /><br />
+
+          <div id="check" onclick="check()">Check</div>
+
+          <br />
+        </form>
+
+        <h3>Translated text here:</h3>
+        <div id="translated">Translated Text Here</div>
+
+        <br />
+
+        <!--
+        <div class="dialog-body">
+          <select id="langToAdd" aria-label="language to add">
+            <option value="yoda">Yoda</option>
+            <option value="pirate">Pirate</option>
+            <option value="valspeak">Valspeak</option>
+            <option value="minion">Minion</option>
+            <option value="ferblatin">Ferblatin</option>
+            <option value="piglatin">Piglatin</option>
+            <option value="dothraki">Dothraki</option>
+            <option value="sindarin">Sindarin</option>
+            <option value="quenya">Quenya</option>
+            <option value="orcish">Orcish</option>
+            <option value="cheunh">Cheunh</option>
+            <option value="gungan">Gungan</option>
+            <option value="mandalorian">Mandalorian</option>
+            <option value="huttese">Huttese</option>
+            <option value="chef">Chef</option>
+            <option value="catalan">Catalan</option>
+            <option value="oldenglish">Oldenglish</option>
+            <option value="shakespeare">Shakespeare</option>
+            <option value="vulcan">Vulcan</option>
+            <option value="klingon">Klingon</option>
+            <option value="romulan">Romulan</option>
+            <option value="dovahzul">Dovahzul</option>
+            <option value="thuum">Thuum</option>
+            <option value="aldmeris">Aldmeris</option>
+            <option value="groot">Groot</option>
+            <option value="wakandan">Wakandan</option>
+            <option value="jive">Jive</option>
+          </select> -->
+        <!-- > End of Select: langToAdd</-->
+        <!-- </div>-->
+        <!-- > End of Div: Dialog-body </-->
+      </div>
+
+      <!-- > End of Div: mBody</-->
+    </div>
+    <!-- > End of  Div: Padding </-->
+
+    <!-- <script src="addserviceworker.js"></script>
+    <script src="install.js"></script> -->
+  </body>
+  <!-- >  End of Body</-->
+</html>
+<!-- > End of HTML</-->

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Hello World</title>
+    <link rel="stylesheet" href="helloWorld.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="helloWorld.js"></script>
+  </head>
+  <body>
+    <div class="grid-container">
+      <div class="header">
+        <h2 id="foo">Header</h2>
+      </div>
+
+      <div class="left" style="background-color:#aaa;">
+        <p onclick="changeTitle()" id="top">please click here</p>
+      </div>
+      <div class="middle" id="bar" style="background-color:#bbb;">
+        <p onclick="changeBackgroundColour()">Column</p>
+      </div>
+      <div class="right" style="background-color:#ccc;">Column</div>
+
+      <div class="footer">
+        <p id="bottom" onclick="changeABunchOfStuff()">Footer</p>
+      </div>
+    </div>
+  </body>
+</html>

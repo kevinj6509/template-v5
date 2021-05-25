@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    
+	<!-- <meta name="mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="application-name" content="Hexadecimal Game" />
+	<meta name="apple-mobile-web-app-title" content="Hex Game" />
+	<meta name="msapplication-starturl" content="/index.html" />
+  <meta name="theme-color" content="#343434"/>
+  
+  <meta name="description" content="A hexadecimal code guessing game">
+  <link rel="apple-touch-icon" href="icons/icon-192x192.png" /> 
+    
+  
+  <link
+      rel="icon"
+      href="icons/icon-256x256.png"
+      type="image/x-icon"
+    />
+    
+    
+	<meta
+	  name="viewport"
+	  content="width=device-width, initial-scale=1, shrink-to-fit=no"
+	/> -->
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet" defer />
+	<!-- <link rel="manifest" href="manifest.json"/> -->
+	
+    <!-- import the webpage's javascript file -->
+    <script src="script.js"></script>
+
+    <title>Hexadecimal Colour Code Game</title>
+  </head>
+  <body>
+    <h1>What is the colour code for this colour?</h1>
+
+    <div id="colorSample"></div>
+    <div id="hexDisplay"></div>
+    
+    <div id="buttons">
+      <button class="button button1" onclick="toggleLevel(1)" id="btn1">Level 1</button>
+      <button class="button button2" onclick="toggleLevel(2)" id="btn2">Level 2</button>
+      <button class="button button3" onclick="toggleLevel(3)" id="btn3">Level 3</button>
+    </div>
+    
+    <div id="modeSwitch">
+      <button class="button button1" onclick="toggleMode(1)" id="btn4">Mode 1</button>
+      <button class="button button2" onclick="toggleMode(2)" id="btn5">Mode 2</button>
+    </div>
+    
+    <div id="cluster1" class="cluster">
+      <span id="a" class="answer">sdg</span>
+      <span id="b" class="answer">sdg</span>
+    </div>
+
+    <div id="cluster2" class="cluster">
+      <span id="c" class="answer">sdg</span>
+      <span id="d" class="answer">sdg</span>
+    </div>
+    
+   <div id="cluster3" class="cluster">
+      <span id="e" class="answer">sdg</span>
+      <span id="f" class="answer">sdg</span>
+    </div>
+    
+    <div id="cluster4" class="cluster">
+      <span id="g" class="answer">sdg</span>
+      <span id="h" class="answer">sdg</span>
+    </div>
+
+    <div class="answer cluster flex">Score: <span id="score"> 0 / 0</span></div>
+	<!-- <script src="addserviceworker.js"></script> -->
+  </body>
+</html>

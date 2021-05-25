@@ -1,0 +1,58 @@
+.hidden {
+  display: none;
+}
+
+.unhidden {
+  display: block;
+}
+
+body {
+}
+
+#main {
+  border: thick solid red;
+  width: 900px;
+  height: 700px;
+
+  /*center in page*/
+  position: reative;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#main div {
+  display: inline-block;
+}
+
+#lightbox {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+#boundaryBigImage {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  z-index: 1;
+}
+
+#positionBigImage {
+  position: absolute;
+  top: 15px;
+  left: 0px;
+  width: 100%;
+}
+
+#x {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  height: 30;
+  width: 30;
+  z-index: 2;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Minecraft Trivia</title>
+    <script src="quizproject.js"></script>
+    <link rel="stylesheet" type="text/css" href="quizproject.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body onload="loadQuestion()">
+    <div id="mBody">
+      <h2>Minecraft Trivia</h2>
+
+      <div class="grid-container">
+        <div class="header">
+          <div id="question">The Question</div>
+        </div>
+
+        <div class="left">
+          <div id="padd">
+            <div class="options hover" id="a" onclick="markIt('a')">A.</div>
+            <div class="options hover" id="b" onclick="markIt('b')">B.</div>
+            <div class="options hover" id="c" onclick="markIt('c')">C.</div>
+            <div class="options hover" id="d" onclick="markIt('d')">D.</div>
+            <br /><br />
+            <div id="concl">Good</div>
+          </div>
+        </div>
+
+        <div class="right">
+          <img id="image" src="quizimages/bg.jpg" alt="" />
+        </div>
+
+        <div class="footer1" onclick="nextQuestion()" id="next">
+          <p id="nextP">Next Question</p>
+        </div>
+
+        <div class="hidden" onclick="load()" id="reloadC">
+          <p id="reload" onclick="load">Restart</p>
+        </div>
+
+        <div class="footer2">
+          <p id="score">Score</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <title>Music Sampler</title>
+    
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="script.js" defer></script>
+	
+    <link rel="stylesheet" href="style.css">
+  </head>  
+  <body>
+    <div id="buttons">
+		
+		<button class="button button2" onclick="instrument(2)" id="btn2">Piano</button>
+		<button class="button button1" onclick="instrument(1)" id="btn1">Guitar</button>
+		<!-- <button class="button button3">All</button> -->
+		
+	</div>
+	
+	<div class="container">
+		<h1>Music Fun</h1>
+		
+		<svg class="iris" id="iIris" viewBox="0 0 1365.334 1365.334"> 
+			<circle cx="682.667" cy="682.667" r="682.667" fill="#ffffff"></circle>
+		</svg>
+		<svg class="padding" viewBox="0 0 1365.334 1365.334"> 
+			<circle cx="682.667" cy="682.667" r="682.667" fill="#343434"></circle>
+		</svg>
+		<svg class="organize" viewBox="0 0 1024 1024"> 
+			<circle cx="512" cy="512" r="512" fill="#ffffff"></circle>
+		</svg>
+		<svg id="pointer" class="organize" viewBox="0 0 1024 1024">
+			<circle cx="512" cy="512" r="512" fill="none"></circle>
+			<circle cx="512" cy="512" r="512" fill="none"></circle>
+			<circle cx="512" cy="512" r="512" fill="none"></circle>
+		</svg>
+	</div>
+	
+  </body>
+</html>

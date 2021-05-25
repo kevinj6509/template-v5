@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>JavascriptTiming2</title>
+    <link rel="stylesheet" href="css2.css" />
+    <script>
+      var startTime;
+      var startSeconds;
+      var myVar;
+      var time;
+
+      var vari = setInterval(function() {
+        myTimer2();
+      }, 5000);
+
+      function myTimer2() {}
+
+      function startTimer() {
+        startTime = new Date();
+        startSeconds = startTime.getSeconds();
+        document.getElementById("start").style.display = "none";
+        document.getElementById("stop").style.display = "block";
+        myVar = setInterval(function() {
+          myTimer();
+        }, 1000);
+      }
+      function myTimer() {
+        var d = new Date();
+        document.getElementById("demo").innerHTML = d.toLocaleTimeString();
+        // stops timer after 10 seconds
+        if (d.getSeconds() - startSeconds > 10) clearInterval(myVar);
+      }
+
+      function stopTimer() {
+        clearInterval(myVar);
+        document.getElementById("stop").style.display = "none";
+        document.getElementById("start").style.display = "block";
+      }
+      function test() {
+        var test;
+        test.className = "unhidden";
+      }
+    </script>
+  </head>
+  <body onload="startTimer()">
+    <div id="lightbox" class="hidden"></div>
+
+    <h1>Javascript Timing In Class Exercise (/10)</h1>
+    <p>A script on this page starts this clock:</p>
+
+    <p id="demo"></p>
+
+    <button onclick="stopTimer()" id="stop">Stop time</button>
+    <button onclick="startTimer()" id="start">Start time</button>
+
+    <button onclick="test()" id="test">test</button>
+
+    <h3>Tasks</h3>
+    <p>1. How long does this clock run? Make it run longer</p>
+    <p>
+      2. Try clicking stop time, then start time. You will see it works. What
+      happens if you click start time multiple times? Discussion in class.
+    </p>
+    <p>
+      3. To fix this, uncomment the commented code in the javascript. What is
+      the solution?
+    </p>
+
+    <p>
+      <b>In class exercise for marks:</b> Write code that displays
+      <a
+        href="https://i.pinimg.com/736x/81/bb/8c/81bb8caf947cc09a7c5c9d54861d9831--homer-simpson-medium.jpg"
+        >this image</a
+      >
+      like a light box on top of the page 5 seconds after the page loads.
+    </p>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+.bacon{
+	color:blue;
+}
+a:link{
+	color:orange;
+	text-decoration:none;
+	font-weight:900;
+}
+
+a:visited{
+	color:orange;
+}
+
+a:hover{
+	color:green;
+	font-family:comic sans;
+	background-color:yellow;
+	font-size:100px;
+	cursor:crosshair;
+	
+	}
+
+a:active{
+
+}
+
+#cookies{
+	background-color:turquoise;
+	border: 3px solid black;
+	width:200px;
+	height:300px;
+	overflow-y:scroll;
+	position:absolute;
+	top:15px;
+	left:1225px;
+}
+
+#kitten{
+background-image:url('images/kitten.jpg');
+width:100px;
+height:100px;
+position:absolute;
+left:450px;
+top:350px;
+}
+
+#kitten:hover{
+background-image:url('images/kitten2.jpg');
+}

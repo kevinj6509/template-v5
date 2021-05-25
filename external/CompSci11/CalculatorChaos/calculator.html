@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Calculator Chaos!</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="/external/CompSci11/CalculatorChaos/Images/calc.png"
+    /> 
+    <link rel="stylesheet" href="calculator.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=VT323"
+      rel="stylesheet"
+    />
+    <script src="calculator.js"></script>
+  </head>
+
+  <body onload="finalGame()">
+    <div id="title">
+      <h1>Calculator Chaos!</h1>
+    </div>
+
+    <div id="border">
+      <div id="chickenBox" onmouseover="move()">
+        <img
+          id="chicken"
+          src="/external/CompSci11/CalculatorChaos/Images/chicken.jpg"
+          alt="chickedAd"
+        />
+        <div id="exit1" onclick="clicked(),move(),close1()">x</div>
+      </div>
+
+      <img
+        id="lol"
+        src="/external/CompSci11/CalculatorChaos/Images/lol.png"
+        alt="lolAd"
+      />
+
+      <div id="exit2">x</div>
+
+      <div id="display">
+        <div id="flash" onclick="flash()"></div>
+
+        <video id="ad" class="unhidden">
+          <source
+            src="/external/CompSci11/CalculatorChaos/Images/mc.mp4"
+            type="video/mp4"
+          />
+          <source
+            src="/external/CompSci11/CalculatorChaos/Images/mc.ogg"
+            type="video/ogg"
+          />
+        </video>
+
+        <img
+          src="/external/CompSci11/CalculatorChaos/Images/skip.PNG"
+          alt="skip"
+          id="skip"
+          onclick="closeAd()"
+          class="pointer"
+        />
+
+        <div id="bars"></div>
+
+        <div id="titlenums" class="hidden">
+          <p>Numbers:</p>
+        </div>
+
+        <div id="numbers" class="hidden">
+          <div id="num1" class="num">0</div>
+          <div id="num2" class="num">0</div>
+          <div id="num3" class="num">0</div>
+          <div id="num4" class="num">0</div>
+          <div id="num5" class="num">0</div>
+          <div id="num6" class="num">0</div>
+          <div id="num7" class="num">0</div>
+          <div id="num8" class="num">0</div>
+        </div>
+
+        <div id="ctitle">
+          <h1 id="ptitle">
+            Calculator Chaos!
+          </h1>
+        </div>
+
+        <div id="bar"></div>
+
+        <div id="begin" class="hidden" onclick="startTimer(),newBegin()">
+          Begin
+        </div>
+
+        <div id="newBegin" class="hidden">Begin</div>
+
+        <div id="refresh" onclick="refresh()" class="hidden">Restart</div>
+
+        <div id="timer" class="hidden">
+          <p id="ptimer">0:00</p>
+        </div>
+
+        <div id="ins" onclick="ins()">
+          <p id="pin">Instructions</p>
+        </div>
+
+        <div id="replay" onclick="replay()" class="hidden">Replay</div>
+
+        <div id="hideCalc" class="hidden" onclick="errorBegin()"></div>
+
+        <div id="calculator" class="hidden">
+          <div id="pos1" class="hidden" onclick="button1()">1</div>
+          <div id="pos2" class="hidden" onclick="button2()">2</div>
+          <div id="pos3" class="hidden" onclick="button3()">3</div>
+          <div id="pos4" class="hidden" onclick="button4()">4</div>
+          <div id="pos5" class="hidden" onclick="button5()">5</div>
+          <div id="pos6" class="hidden" onclick="button6()">6</div>
+          <div id="pos7" class="hidden" onclick="button7()">7</div>
+          <div id="pos8" class="hidden" onclick="button8()">8</div>
+          <div id="pos9" class="hidden" onclick="button9()">9</div>
+          <div id="pos0" class="hidden" onclick="button0()">0</div>
+          <div id="posS" class="hidden" onclick="buttonS()">-</div>
+          <div id="posP" class="hidden" onclick="buttonP()">+</div>
+          <div id="posD" class="hidden" onclick="buttonD()">/</div>
+          <div id="posM" class="hidden" onclick="buttonM()">x</div>
+          <div id="posSqrt" class="hidden" onclick="buttonSqrt()">√</div>
+          <div id="posC" onclick="buttonC()">AC</div>
+          <div id="posDe" onclick="Delete()">Del</div>
+          <div id="posE" onclick="runE()">=</div>
+          <div id="posMr" class="hidden" onclick="buttonMr()">Mr</div>
+          <div id="posMin" class="hidden" onclick="buttonMin()">Min</div>
+
+          <div id="cdisplay">
+            <p id="pdisplay">Click Begin</p>
+          </div>
+        </div>
+
+        <div id="lvl" class="hidden">
+          <p id="plvl"></p>
+        </div>
+
+        <div id="newstart" class="dropdown,unhidden">
+          <button id="tstart" onclick="newstart()" class="dropbtn">
+            Level
+          </button>
+          <div id="myDropdown" class="dropdown-content">
+            <a href="#" onclick="level1(),start(),set()">Level 1</a>
+            <a href="#" onclick="level2(),start(),set()">Level 2</a>
+            <a href="#" onclick="level3(),start(),set()">Level 3</a>
+            <a href="#" onclick="level4(),start(),set()">Level 4</a>
+          </div>
+        </div>
+
+        <div id="win" class="hidden"></div>
+
+        <div id="lose" class="hidden"></div>
+      </div>
+    </div>
+
+    <div id="lightbox" class="hidden">
+      <div id="instruction" class="hidden">
+        <img
+          id="x"
+          src="/external/CompSci11/CalculatorChaos/Images/x.png"
+          onclick="exit()"
+          alt="close"
+        />
+
+        <p id="in">
+          Welcome to Calculator Chaos! <br />
+          <br />
+          This is a game where you have to make certain <br />
+          numbers on your calculator. Except most of your <br />
+          buttons are missing, and you are timed!
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

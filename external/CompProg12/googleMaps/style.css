@@ -1,0 +1,59 @@
+body {
+  font-family: helvetica, arial, sans-serif;
+  margin: 2em;
+}
+
+h1 {
+  font-style: italic;
+  color: black;
+}
+
+#map {
+  height: 700px;
+  width: 100%;
+  border: thin solid black;
+}
+/* Pan to current location button */
+.custom-map-control-button {
+  appearance: button;
+  background-color: #fff;
+  border: 0;
+  border-radius: 2px;
+  box-shadow: 0 1px 4px -1px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  margin: 10px;
+  padding: 0 0.5em;
+  height: 40px;
+  font: 400 18px Roboto, Arial, sans-serif;
+  overflow: hidden;
+}
+.custom-map-control-button:hover {
+  background: #ebebeb;
+}
+
+.w3-teal {
+  color: #fff;
+  background-color: #009688;
+  font-size: 2em;
+  border: thin solid #009688;
+  border-radius: 15px;
+}
+
+.w3-teal:hover {
+  background-color: #898989;
+  border: thin solid #898989;
+}
+
+.w3-teal:active {
+  background-color: #8989FF;
+  border: thin solid #8989FF;
+}
+
+.w3-input {
+  padding: 8px;
+  width: 25%;
+}
+
+.padding {
+  padding-bottom: 20px;
+}

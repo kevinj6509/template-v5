@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>lightbox</title>
+    <link rel="stylesheet" href="lightbox.css"> 
+    <script src="lightbox.js"></script>  
+  </head>
+  
+  <body>
+    <h1>My First Lightbox</h1>
+	
+	<div id="main">
+	
+		<div> 
+			<a href="javascript:displayLightBox(0)">
+				<img src = "images/arabian-thumb.jpg" alt="Arabian">
+			</a>
+		</div>
+		
+		<div> 
+			<a href="javascript:displayLightBox(1)">
+				<img src = "images/dog-thumb.jpg" alt="Lab Puppy">
+			</a>
+		</div> 
+		
+		<div> 
+			<a href="javascript:displayLightBox(2)">
+				<img src = "images/horseandpony-thumb.jpg" alt="Lab Puppy">
+			</a>
+		</div> 
+		
+		<div> 
+			<a href="javascript:displayLightBox(3)">
+				<img src = "images/horse-thumb.jpg" alt="Lab Puppy">
+			</a>
+		</div> 
+		
+		<div> 
+			<a href="javascript:displayLightBox(4)">
+				<img src = "images/pinto-thumb.jpg" alt="Lab Puppy">
+			</a>
+		</div> 
+		
+		<div> 
+			<a href="javascript:displayLightBox(5)">
+				<img src = "images/tb-thumb.jpg" alt="Lab Puppy">
+			</a>
+		</div> 
+		
+		
+	
+	</div> <!-- main -->
+	
+	<div class ="hidden" id="lightbox"></div>
+	
+	
+	<div id="positionBigImage">
+		<div class="hidden" id="boundaryBigImage" >
+		
+			<a href="javascript:displayLightBox(-1)">
+				<img id="x" src="images/x.png" alt="close">
+			</a>
+			<img id="bigImage" src="images/arabian.jpg" alt="arabian">
+			
+		</div>
+	</div> <!-- positionBigImage -->
+	
+	
+	
+  </body>
+  
+</html>

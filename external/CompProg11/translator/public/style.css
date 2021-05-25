@@ -1,0 +1,338 @@
+body {
+  background-image: url("https://cdn.glitch.com/2a544231-4591-4529-b941-bd7b992e0519%2Fgalaxy.jpg?v=1574978852473");
+  font-family: Arial;
+  margin: 0;
+  padding: 0;
+}
+
+#padding {
+  padding: 2%;
+}
+
+#mBody {
+  border-radius: 7px;
+  position: absolute;
+  background-color: white;
+  padding: 2%;
+  left: 2%;
+  top: 15%;
+  width: 92%;
+  height: 60%;
+  box-shadow: 10px 10px 5px grey;
+}
+
+#mOffline {
+  text-align: center;
+  z-index: 3;
+  border-radius: 7px;
+  position: absolute;
+  background-color: white;
+  padding: 2%;
+  left: 2%;
+  top: 15%;
+  width: 92%;
+  height: 60%;
+  box-shadow: 10px 10px 5px grey;
+}
+
+#closeLoader {
+  position: absolute;
+  top: 2%;
+  right: 1%;
+  height: 24px;
+  width: 24px;
+}
+
+/*
+#mLoad{
+  text-align: center;
+  z-index:3;
+  border-radius:7px;
+  position:absolute;
+  background-color:white;
+  padding:2%;
+  left:2%;
+  top:15%;
+  width:92%;
+  height:40%;
+  box-shadow: 10px 10px 5px grey;
+}
+
+@media only screen and (max-width: 600px) {
+#mLoad {
+    display:none;
+  }
+}
+
+#mH1{
+  position:absolute;
+  top:25%;  
+  left:40%;
+}
+
+#closeLoader{
+  position:absolute;
+  top:2%;
+  right:1%;
+  height:24px;
+  width:24px;
+}
+*/
+
+#translated {
+  border-radius: 7px;
+  padding: 5px;
+  background-color: #c9c9c9;
+  color: black;
+  box-shadow: 3px 3px 5px grey;
+  height: 25%;
+}
+
+#text {
+  /*width:50%; */
+}
+
+/*
+
+#loadDiv {
+  width: 100px;
+  height: 15px;
+  background-color: blue;
+  position: relative;
+  -webkit-animation-name: load; */ /* Safari 4.0 - 8.0 */
+/*  -webkit-animation-duration: 3s; */ /* Safari 4.0 - 8.0 */
+/*  animation-name: load;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+*/
+
+/* The animation code */
+
+/*
+@keyframes load {
+  0%   {background-color:#0529e6; left:0px; top:50%;}
+  25%  {background-color:#059ce6; left:90%; top:50%;}
+  50%  {background-color:#05d1e6; left:90%; top:50%;}
+  75%  {background-color:#01e4d1; left:0px; top:50%;}
+  100% {background-color:#0dabf2; left:0px; top:50%;}
+}
+
+*/
+
+/*
+#check {
+  background-color: #19b314;
+  -webkit-animation-name: check;
+  -webkit-animation-duration: 2s; 
+  animation-name: check;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  color: black;
+  border-radius: 50px;
+  width: 60px;
+  padding: 1px;
+  text-align: center;
+}
+
+@-webkit-keyframes check {
+  from {
+    background-color: red;
+  }
+  to {
+    background-color: orange;
+  }
+}
+
+
+@keyframes check {
+  from {
+    background-color: red;
+  }
+  to {
+    background-color: orange;
+  }
+}
+
+*/
+
+#check {
+  color: white;
+  border-radius: 30px;
+  padding: 3px;
+  text-align: center;
+  width: 100px;
+  background-color: #1d6ebf;
+  cursor: pointer;
+}
+
+.selectOption {
+  background-color: white;
+}
+
+.hidden {
+  display: none;
+}
+
+.unhidden {
+  display: block;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+#mTitle {
+  padding-bottom: 1%;
+}
+
+#title {
+  display: inline;
+  font-size: 2em;
+}
+
+#lang {
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  display: inline;
+  font-size: 2em;
+  height: 70px;
+}
+
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  width: 6%;
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+
+#textCover {
+  position: absolute;
+  display: inline;
+  background-color: #bdbbba;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  width: 250px;
+  height: 50px;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+#selectLang {
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  background-color: red;
+}
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+  color: #f1f1f1;
+  font-size: 50px;
+}
+
+.overlay a:active {
+  color: #e83033;
+}
+
+.overlay #closebtn {
+  position: fixed;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+  display: none;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {
+    font-size: 20px;
+  }
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+
+#butInstall {
+  color: white;
+  border-radius: 30px;
+  padding: 3px;
+  text-align: center;
+  width: 100px;
+  background-color: #4CAF50;
+  cursor: pointer;
+}

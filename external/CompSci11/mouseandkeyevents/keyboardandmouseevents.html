@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Keyboard Reading and Mouse Events</title>
+   <style>
+     #ball {position:absolute; top:0px; left:0px;}
+	 #container {width:100%;height:100%;}
+   </style>
+    <script>
+		
+    (function () {
+        function contentLoaded () { 
+		
+                var chars = new Array();
+                var container = document.getElementById('container');
+
+                window.addEventListener('keypress', function (e) {
+				c = String.fromCharCode(e.keyCode);
+                if (e.keyCode !== 13) {
+				    // adds a key to the array  
+                    //chars.push(c);
+					var oImg = document.createElement("img");
+					oImg.setAttribute('src', 'images/ball.gif');
+					oImg.setAttribute('alt', 'na');
+					oImg.setAttribute('height', '50px');
+					oImg.setAttribute('width', '50px');
+					container.appendChild(oImg);
+                }
+				
+                }, false);
+
+                window.addEventListener('keyup', function (e) {
+                    if (e.keyCode === 13) {
+                        container.textContent = chars.join('');
+                        chars = [];							
+                    }
+                }, false);
+        }
+
+        window.addEventListener('DOMContentLoaded', contentLoaded, false); 
+    }());
+	
+	
+	// Click and Drag Mouse Events
+	function loadMouseEvents() {
+	  document.getElementById('ball').onmousedown = function() {
+		  this.style.position = 'absolute';
+
+		  var self = this;
+
+		  document.onmousemove = function(e) {
+			e = e || event;
+			fixPageXY(e); 
+		   
+			self.style.left = e.pageX-25+'px'; 
+			self.style.top = e.pageY-25+'px'; 
+		  }
+		  this.onmouseup = function() {
+			document.onmousemove = null;
+		  }
+	  }
+
+	  document.getElementById('ball').ondragstart = function() { return false }
+    }
+	
+	function fixPageXY(e) {
+    if (e.pageX == null && e.clientX != null ) { 
+		var html = document.documentElement;
+		var body = document.body;
+
+		e.pageX = e.clientX + (html.scrollLeft || body && body.scrollLeft || 0);
+		e.pageX -= html.clientLeft || 0;
+		
+		e.pageY = e.clientY + (html.scrollTop || body && body.scrollTop || 0);
+		e.pageY -= html.clientTop || 0;
+    }
+}
+    </script>
+</head>
+<body onLoad="loadMouseEvents()">
+   <div id="ball"> <img src="images/ball.gif" alt="ball" ></div>
+    <div id="container">
+	
+    </div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="/external/CompSci11/Quiz3/style.css">  
+  </head>
+  
+  <body>
+    <img src="snake.jpg" alt="snake">
+  
+    <ol>
+		<li>McDonalds</li>
+		<li>Wendy's</li>
+		<li>A&W</li>
+		<li>KFC's</li>
+	</ol>
+	
+	
+	<a href="https://www.youtube.com/">Youtube.com</a>
+	
+	<pre>
+	public static String getGoal(String[]fileContents){
+			String goal = JOptionPane.showInputDialog("Enter a four letter goal word");
+			if(goal == null){
+					System.exit(0);
+				} // if
+			
+			goal = goal.toLowerCase();
+			
+			int x = 0;
+			
+			// check if valid
+			while(!fileContents[0].contains(goal) || goal.length() (less than) 4 || goal.length() (greater than) 4){
+				x++;
+				goal = JOptionPane.showInputDialog("(" + x + ") invalid enteries.\n" + goal + " is not in the dictionary, or is not four letters long. \n Enter anoter staring word: ");
+				if(goal == null){
+					System.exit(0);
+				} // if
+				
+				goal = goal.toLowerCase();
+				
+			}
+			System.out.println("Goal word is: " + goal);
+			return goal;
+		} // getGoal
+	
+	</pre>
+	
+	
+	<hr>
+	
+	</body>
+  
+</html>
